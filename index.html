@@ -212,41 +212,9 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-    <img src="<?= base_url('asset/img/logo-fix-putih.png'); ?>" alt="Logo" style="height: 40px; width:100px; margin-left:210px; padding:10px">
+    <img src="./asset/dist/js/logo-fix-putih.png'); ?>" alt="Logo" style="height: 40px; width:100px; margin-left:210px; padding:10px">
         <div class="mdl-layout-spacer"></div>
-    <!-- Notifications Icon and Dropdown -->
-<div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
- data-badge="<?= isset($unread_count) ? $unread_count : 0; ?>">
-notifications_none
-</div>
-<ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
-for="notification">
-<li class="mdl-list__item">
-    <span><i class="material-icons">notifications</i></span>
-     <span>You have <?= isset($unread_count) ? $unread_count : 0; ?> new notifications!</span>
-</li>
-<?php if (!empty($notifications)): ?>
-    <?php foreach ($notifications as $notification): ?>
-        <li onclick="window.location.href='<?= base_url('ticket/detail/' . $notification['ticket_id'] . '/' . $notification['id']); ?>'" class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top"  data-notification-id="<?= $notification['id']; ?>">  
-        <span class="mdl-list__item-primary-content">      
-        <a href="<?= base_url('ticket/detail/' . $notification['ticket_id']); ?>" class="list-notif">
-        
-                <span><?php echo $notification['message']; ?></span>
-        </span>
-            <span class="mdl-list__item-secondary-content">
-                <span class="time label--transparent"></span>
-                </a>
-            </span>
-        
-        </li>
-    <?php endforeach; ?>
-    <span class="mdl-list__item-primary-content">
-<button id="clear-notifications" class="mdl-button mdl-js-button mdl-js-ripple-effect">CLEAR NOTIFICATIONS</button>
-</span>        
-<?php else: ?>
-    <li class="mdl-list__item">No new notifications.</li>
-<?php endif; ?>
-</ul>
+  
         <div class="avatar-dropdown" id="icon">
             <span>Accounting</span>
         </div>
@@ -258,11 +226,11 @@ for="notification">
             <div class="scroller" id="scroller">
                 <div class="scroll__container" id="scroll__container">
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="<?= site_url('');?>">
+                        <a class="mdl-navigation__link" href="index.php">
                             <i class="material-icons" role="presentation">dashboard</i>
                             Dashboard
                         </a>
-                        <a class="mdl-navigation__link" href="<?= site_url('welcome');?>">
+                        <a class="mdl-navigation__link" href="index.php">
                             <i class="material-icons" role="presentation">local_atm</i>
                             Kalkulator Coretax
                         </a>
